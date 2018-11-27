@@ -1,5 +1,8 @@
 package com.yyzc.agent.apmagentdemo.agent;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Author: songyalong
  * @Description:
@@ -12,6 +15,16 @@ public class AgentTest {
         AgentTest agentTest = new AgentTest();
         agentTest.mathod1();
         agentTest.mathod2();
+
+        agentTest.memoryTest();
+    }
+
+    private void memoryTest() {
+        boolean is = true;
+        List<Object> list = new ArrayList<Object>();
+        for(int i=0; i< 100000; i++){
+            list.add("hello world");
+        }
     }
 
     private void mathod2() {
