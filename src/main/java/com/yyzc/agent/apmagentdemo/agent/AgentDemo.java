@@ -16,8 +16,7 @@ public class AgentDemo {
     public static void premain(String agentArgs, Instrumentation inst){
         System.out.println("开始");
         System.out.println(agentArgs);
-        inst.addTransformer(new ClassFileTransformer() {
-        });
-        System.out.println();
+        inst.addTransformer(new ClassTransformer());
+        System.out.println("结束");
     }
 }
